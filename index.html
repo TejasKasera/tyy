@@ -1,0 +1,103 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <script language="javascript">
+
+  function Disable_Control_C() {
+  var keystroke = String.fromCharCode(event.keyCode).toLowerCase();
+      
+  if (event.ctrlKey && (keystroke == 'c')) {
+  alert("Do not press Ctrl+C. Pressing Ctrl+C will not copy anything.");
+  event.returnValue = false;
+  }
+      
+  if (event.ctrlKey && (keystroke == 'v')) {
+  alert("Do not press Ctrl+V. Pressing Ctrl+V will not paste anything.");
+  event.returnValue = false;
+  }
+  }
+
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"/>
+      
+  <span"
+  class="float"
+  onclick="gotowhatsapp()"
+  style="
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;">
+  
+  <img
+  src="app.gif"
+  alt=""
+  height="200px"
+  width="360px"/>
+  </span>
+
+  <script>
+    document.onkeydown=function(e)
+    {
+      if(event.keyCode == 123)
+      {
+        return false;
+      }
+  
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+      {
+        return false;
+      }
+  
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
+      {
+        return false;
+      }
+  
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+      {
+        return false;
+      }
+    }
+  </script>
+  </head>
+
+
+  <body onkeydown="javascript:Disable_Control_C()">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <p><i class="fab fa-whatsapp-square"></i></p>
+  </body>
+
+
+  <script>
+  function gotowhatsapp() {
+  var url = "https://wa.me/?text="
+  + "Tejas ने आपके लिए कुछ भेजा है 👇👇"
+  + "https://bit.ly/3j2emzk"
+  window.open(url, '_blank').focus();
+  }
+  </script>
+
+
+
+<script type="text/javascript">
+  ! function() {
+      var t;
+      try {
+          for (t = 0; 10 > t; ++t)
+              history.pushState({}, "", "#");
+          onpopstate = function(t) {
+              t.state && alert('Please share this link to five people in WhatsApp.');
+          }
+      } catch (o) {}
+  }();
+</script>
+
+</html>
